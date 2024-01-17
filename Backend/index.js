@@ -21,7 +21,9 @@ app.post('/add' , async (req, res) => {
         name : cardPayload.name,
         description : cardPayload.description,
         src : cardPayload.src,
-        interest : cardPayload.interest
+        interest : cardPayload.interest,
+        tinder : cardPayload.tinder,
+        bumble : cardPayload.bumble
     })
 
     res.json({

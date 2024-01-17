@@ -18,8 +18,8 @@ export default function Card() {
           });
       }, []);
 
-      const tinder = "https://www.tinder.com";
-      const bumble = "https://www.bumble.com";
+    //   const tinder = "https://www.tinder.com";
+    //   const bumble = "https://www.bumble.com";
    
      
  
@@ -47,7 +47,23 @@ export default function Card() {
                     
             ))}
           </ul>
-         </div>    })  }
+          <div style={styles.socialLinks}>
+             <a href={card.tinder} target="_blank" style={{...styles.link}}>
+              Tinder
+             </a>
+             <br />
+             <a href={card.bumble} target="_blank"  style={styles.link}>
+               Bumble
+             </a>
+           </div>
+
+         </div>    }) 
+         
+          }
+          {
+            
+          }
+    
           </div>        
 }
 
@@ -104,14 +120,6 @@ const styles = {
     },
   };
 
-//   <div style={styles.socialLinks}>
-//   <a href={tinder} target="_blank" style={{...styles.link}}>
-//    Tinder
-//   </a>
-//   <br />
-//   <a href={bumble} target="_blank"  style={styles.link}>
-//     Bumble
-//   </a>
-// </div>
+
 
   //   https://ih1.redbubble.net/image.2106996310.0701/ur,pin_large_front,square,600x600.u4.jpg

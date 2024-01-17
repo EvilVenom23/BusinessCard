@@ -1,12 +1,15 @@
 const  mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://paritoshshukla:Mummypapa14@cluster0.bplsj6n.mongodb.net/businessCard");
+
+mongoose.connect("link");
 
 const cardSchema = mongoose.Schema({
     name : String,
     description : String,
     src : String,
-    interest : Array
+    interest : Array,
+    tinder : String,
+    bumble :String
 })
 
 const card = mongoose.model('card' , cardSchema )

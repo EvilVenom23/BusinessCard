@@ -1,10 +1,26 @@
+import { useEffect, useState } from 'react'
+export default function Card() {
 
-export default function Card({bcards}) {
-    
+    const [bcards, setBcards] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/see")
+          .then(async (res) => {
+            const json = await res.json();
+            setBcards(json.cards);
+            console.log("cards:",bcards);
+            setLoading(false);
+          })
+          .catch((error) => {
+            console.error('Error fetching business cards:', error);
+            setLoading(false);
+          });
+      }, []);
 
       const tinder = "https://www.tinder.com";
       const bumble = "https://www.bumble.com";
-      console.log(bcards)
+   
      
  
     return <div>  
